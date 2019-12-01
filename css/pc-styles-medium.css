@@ -148,6 +148,8 @@ body {
         grid-template-columns: repeat( var(--max-columns) , auto);
         grid-template-rows: repeat( var(--max-rows) , auto);
         gap: 10px 10px;
+        align-items: center;
+        justify-content: center;
     }
 
     .content-item {
@@ -190,11 +192,11 @@ body {
       }
 
       .prev {
-        left: 29%;
+        left: 36%;
       }
 
       .next {
-        right: 3%;
+        right: 10%;
       }
 
     .item-header {
