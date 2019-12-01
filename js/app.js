@@ -97,7 +97,10 @@ function createPokemonCard(p, destination) {
     var pokeImg = p.sprites.front_default;
     if (pokeImg !== null) {
         image.setAttribute("src", pokeImg);
-    } 
+    } else {
+        var pokeImg = p.sprites.front_female;
+        image.setAttribute("src", pokeImg);
+    }
     image.setAttribute("alt", p.name);
     
     item.appendChild(image);
