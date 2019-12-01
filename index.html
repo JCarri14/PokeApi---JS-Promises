@@ -4,26 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>PokeApi</title>
+    <title>PokeWiki</title>
     <link rel="stylesheet" type = "text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/mobile-styles.css">
     <link rel="stylesheet" type="text/css" href="css/pc-styles-medium.css">
     <script src="js/app.js"></script>
 </head>
 <body>
-    <header id="header">
-
+    <header class="header">
+        <section class="header-search">
+            <form id="form-search">
+                <input class="form-text" type="text"name="search_info">
+                <button type="button">Search</button>
+            </form>
+        </section>
+        <h1 class="header-title">POKEMON</h1>
     </header>
-    <section id="main-container">
-        <section id="grid-container">
-            <section id="content-box">
+    <section class="main-container">
+        <section class="control-container">
+            <section class="upper-control">
+                <section class="type-info">
+                    <img class="type-img" src="assets/all.png"/>
+                    <h2 class="type-title"></h2>
+                </section>
+                <section class="type-control">
+                    <button class="type-btn" type="button" onclick="plusType(-1)">PREV</button>
+                    <button class="type-btn" type="button" onclick="plusType(1)">NEXT</button>
+                </section>
+                
+            </section>
+            <section class="selected-control">
+
             </section>
         </section>
-        
+        <section class="carousel-container">
+            <section class="inner-carousel">
+            </section>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </section>     
     </section>
     <footer id="footer">
 
     </footer>
-    <script>getPokemonInfo()</script>
+    <script>updateTypeToShow()</script>
+    <!--<script>getPokemonInfo()</script> -->
 </body>
 </html>
